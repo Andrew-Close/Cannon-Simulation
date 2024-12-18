@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html onmousemove="track_mouse(event)">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css"
+    </head>
+    <body>
+        <div id="cannon"></div>
+        <span id="object-indicator"></span>
+        <div id="target"></div>
+        <div id="key-dropdown-container">
+            <button onclick="toggleDropdown()" id="key-dropdown-button">Keyboard Shortcuts</button>
+            <div id="dropdown">
+
+                <p class="dropdown-text">
+                    Press w to increase the cannon height.
+                </p>
+                <p class="dropdown-text">
+                    Press s to increase the cannon height.
+                </p>
+                <p class="dropdown-text">
+                    Press a to rotate the cannon clockwise when not using mayhem mode.
+                </p>
+                <p class="dropdown-text">
+                    Press d to rotate the cannon counter-clockwise when not using mayhem mode.
+                </p>
+                <p class="dropdown-text">
+                    Press number keys 0-9 to set the cannon speed when not using mayhem mode.
+                </p>
+                <br>
+                <p class="dropdown-text">
+                    Press f to fire a ball.
+                </p>
+                <p class="dropdown-text">
+                    Press r to set all values to default.
+                </p>
+                <p class="dropdown-text">
+                    Press Spacebar to toggle mayhem mode.
+                </p>
+            </div>
+        </div>
+        <table id="controls">
+            <tr class="row">
+                <td><button onclick="setDefault(this)" class="default" id="height-default">Set to default</button></td>
+                <td><p class="label-header">Cannon Height</p></td>
+                <td><h3 class="label" id="height-label">0</h3></td>
+                <td><input type="range" min="0" max="600" class="slider" id="cannon-height"></td>
+            </tr>
+            <tr class="row">
+                <td><button onclick="setDefault(this)" class="default" id="angle-default">Set to default</button></td>
+                <td><p class="label-header">Cannon Angle</p></td>
+                <td><h3 class="label" id="angle-label">0</h3></td>
+                <td><input type="range" min="-45" max="90" class="slider" id="cannon-angle"></td>
+            </tr>
+            <tr class="row">
+                <td><button onclick="setDefault(this)" class="default" id="speed-default">Set to default</button></td>
+                <td><p class="label-header">Cannonball Speed</p></td>
+                <td><h3 class="label" id="speed-label">0</h3></td>
+                <td><input type="range" min="1" max="10" class="slider" id="object-speed"></td>
+            </tr>
+            <tr class="row">
+                <td><button onclick="setDefault(this)" class="default" id="gravity-default">Set to default</button></td>
+                <td><p class="label-header">Gravity</p></td>
+                <td><h3 class="label" id="gravity-label">1</h3></td>
+                <td><input type="range" min="0.5" max="5" step="0.5" class="slider" id="gravity"></td>
+            </tr>
+            <tr class="row">
+                <td><button onclick="setDefault(this)" class="default" id="slowmo-default">Set to default</button></td>
+                <td><p class="label-header">Slowmo Factor</p></td>
+                <td><h3 class="label" id="slowmo-label">0</h3></td>
+                <td><input type="range" min="1" max="5" class="slider" id="slowmo"></td>
+            </tr>
+            <tr class="row">
+                <td><button onclick="setDefault(this)" class="default" id="all-default">Set all to default</button></td>
+                <td></td>
+                <td><button onclick="fire()" id="fire-button">Fire</button></td>
+                <td><button onclick="start_mayhem()" id="mayhem-button">Mayhem Mode</button></td>
+            </tr>
+        </table>
+        <canvas id="tracer-canvas"></canvas>
+        <canvas id="objects-canvas"></canvas>
+        <script src="script.js"></script>
+    </body>
+</html>
