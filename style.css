@@ -1,0 +1,70 @@
+body {
+    overflow: hidden;
+}
+#cannon {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    background-color: black;
+    transform: rotate(45deg);
+    bottom: 50px;
+}
+.object{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: red;
+}
+#target {
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    bottom: 0;
+    background-color: darkred;
+}
+#controls {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+    z-index: 2;
+}
+.row {
+    height: 30px;
+}
+.slider {
+    position: relative;
+    top: 0;
+}
+h3 {
+    position: relative;
+}
+.default {
+    position: relative;
+    width: 100px;
+}
+#mayhem-button {
+    background-color: #f99;
+}
+#key-dropdown-container {
+    position: absolute;
+    z-index: 1;
+}
+#dropdown {
+    visibility: hidden;
+}
+canvas {
+    position: absolute;
+}
+.label {
+    position: relative;
+    font-size: calc(20px + 0.2vw);
+}
+.label-header {
+    position: relative;
+    font-size: calc(18px + 0.2vw);
+}
+table {
+    width: 33vw;
+    height: 50vh;
+}
